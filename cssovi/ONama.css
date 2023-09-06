@@ -1,0 +1,258 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    background: #fff;
+    background-size: cover;
+}
+
+nav{
+    background-color: black;
+}
+
+.navbar {
+    height: 70px;
+    line-height: 70px;
+}
+
+.tab{
+    max-width: 200px;
+}
+
+.tab > a:hover{
+    color: rgb(255, 217, 0);
+}
+
+.tabLink{
+    text-decoration: none;
+    margin-left: 20px;
+    color:white;
+    cursor: pointer;
+}
+
+i{
+    color: orange;
+    display: inline-block;
+    justify-content: center;
+}
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    margin-top: auto;
+    text-shadow: 0.5px 0.5px black;
+    background-image: url(../Resursi/img/zaiskri-bg.jpg);
+    background-size:cover;
+}
+
+@keyframes navigacijaAnimation {
+    100% { right: 0; }
+}
+
+#navigacijastranice {
+    position: absolute;
+    right: -100%;
+    gap:1rem;
+    animation: navigacijaAnimation 1s forwards;
+    animation-delay: 1s;
+    line-height: 0px;
+}
+
+.stranica-link{
+    text-decoration: none;
+    color: orange;
+    background-color: none;
+    line-height: 50px;
+    max-width: 150px;
+}
+.stranica-link:hover{
+    color: yellow;
+}
+
+#SlikaZgrade {
+    display:flex;
+    background-position: center center;
+    height: 175px;
+    background-image: url(../Resursi/img/kampus-iz-zraka-min-1.jpg);
+	animation: 0.75s ease-in 0s 1 slideInFromTop;
+    margin-bottom: 15px;
+}
+
+.iconice{
+    color: red;
+}
+
+#oNama{
+    text-align: center;    
+    justify-self: center;
+    animation: normal 1s naslovUp;
+    margin-bottom: 15px;
+}
+
+#oNama > h1{
+    font-weight: bold;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0.5em;
+    border-bottom: 4px solid #ffb700;
+}
+
+.naslovi{
+    text-align: center;
+    justify-self: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+#naseVrijednostiTekst > p{
+    color: gray;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-family: 'Dancing Script';
+    font-size: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.cursiveTekst > p{
+    color: gray;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-family: 'Dancing Script';
+    font-size: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.columnTekst{
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+.columnTekst > h6{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    font-weight: lighter;
+    border-bottom: 1px solid gray;
+}
+
+.columnTekst > p{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: gray;
+    font-size: small;
+    font-weight: 50;
+    min-height: 15em;
+}
+
+.columni{
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 3px;
+    margin-bottom: 5%;
+}
+
+.year{
+    color: blue;
+}
+
+.imageColumn{
+    max-width: 20%;
+    margin-bottom:2%;
+}
+
+.image1{
+    max-width: 30%;
+}
+
+.image2{
+    max-width: 70%;
+}
+
+#Directions{
+    background-image: url(../Resursi/img/kakoDoNas.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    background-color: rgba(255, 255, 255, 0.493);
+    background-size: cover;
+}
+
+#DirectionsColumns{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 2%;
+
+}
+
+.DirectionsColumn{
+    margin-top: 5%;
+    font-size: large;
+    min-width: 40%;
+    border: 1px solid #c4c4c4;
+    background-color: #fdfdfd;
+    min-height: 30em;
+}
+
+h5{
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.directionsIconice{
+    color: dodgerblue;
+}
+
+#karta{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.directionTekst{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 4%;
+    font-size: small;
+    color: gray;
+}
+
+.footerTekst{
+    font-size: 3rem;
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes slide {
+    100% { right: 0; }
+}
+
+@keyframes naslovUp {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform : translateY(0);
+    }
+}

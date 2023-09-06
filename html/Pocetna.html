@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPIT</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href = "../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../cssovi/Pocetna.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap/bootstrap.js"></script>
+    <script src="../javascripte/Pocetna.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+       aria-controls="navbarNav" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav grid column-gap-2" style="position: fixed; background-color: black; width: 100%;">
+
+          <li class="tab" id="loginButton">
+            <a class="tabLink" href="PrijaviSe.html"></i>Prijavi se <i class="fa-solid fa-right-to-bracket" style="color: dodgerblue;"></i></a>
+          </li>
+
+          <li class="tab" id="logoutButton" style="display: none;">
+            <a class="tabLink" href="#" onclick="logoutUser()">
+              <i class="fa-solid fa-right-from-bracket" style="color: white;"></i>Odjava
+            </a>
+          </li>
+
+          <li class="tab">
+            <a class="tabLink" href="Pocetna.html"><i class="fa-solid fa-house"></i> Početna</a>
+          </li>
+
+          <li class="tab">
+            <a class="tabLink" href="ONama.html"><i class="fa-regular fa-comments"></i> O nama</a>
+          </li>
+
+          <li class="tab">
+            <a class="tabLink" href="NovostiPick.html"><i class="fa-solid fa-circle-info"></i> Novosti</a>
+          </li>
+
+          <li class="tab" id="nastavniPlan" style="display: none;">
+            <a class="tabLink" href="nastavniPlan.html" id="nastavniPlan"><i class="fa-solid fa-circle-info"></i> Nastavni plan</a>
+          </li>
+          
+          <li class="tab" data-bs-target="modal">
+            <a class="tabLink" data-bs-toggle="modal" data-bs-target="#modal"><i class="fa-solid fa-envelope"></i> Kontakt </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="modal fade" id="modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h2 class="modal-title" id="kontaktModalLabel"><i class="fa-solid fa-envelope" style="color: blue;"></i> Kontaktirajte nas</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+            </div>
+
+            <div class="modal-body">
+              <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
+                <script src="../javascripte/Pocetna.js"></script>
+                <div>
+                  <label for="FullName" class="form-label"><b>Puno Ime</b></label>
+                  <input type="text" class="form-control" name="FullName" required>
+                </div>
+
+                <div>
+                  <label for="Email" class="form-label"><b>E-mail</b></label>
+                  <input type="email" class="form-control" name="Email" required>
+                </div>
+
+                <div>
+                  <label for="Importance"><b>Važnost poruke</b></label>
+                  <select class="form-select" name="Importance"  required>
+                    <option>Niska</option>
+                    <option>Srednja</option>
+                    <option selected>Visoka</option>
+                  </select>
+                </div> 
+
+                <div>
+                  <label for="Message" class="form-label"><b>Poruka</b></label>
+                  <textarea class="form-control" name="Message" rows="3" required></textarea>
+                </div>
+
+                <div class="form-check form-switch">
+                    <div class="row row-cols-auto align-items-center">
+
+                    <div class="col">
+                      <lable class="form-check-label" for="ReceiveNewsletter"><b>Želim primati obavijesti</b></lable>
+                    </div>
+                    
+                    <div class="col">
+                      <input type="checkbox" id="ReceiveNewsletter" name="ReceiveNewsletter">
+                    </div>
+                    
+                </div>
+              </div>
+
+                <div class="modal-footer" style="float: left; border-top: none;">
+                  <button type="close" class="btn btn-danger" data-bs-dismiss="modal">Odustani</button>
+                  <button type="submit" class="btn btn-primary">Pošalji</button>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+      <video autoplay loop muted>
+          <source src="../Resursi/video/typingOnlaptop.mp4">
+      </video>
+      
+      <div class="videoText">
+          <h1 id="textVideo">
+                Budi izvrstan u onom što voliš
+              <div class="text-danger">
+                ZAISKRI
+              </div>
+          </h1>
+      </div>
+
+</body>
+</html>
