@@ -1,27 +1,25 @@
 $(document).ready(function() {
     $('#logIn').on('click', function(){
-        var username = $('#username').val();
-        var password = $('#password').val();
-        var url = 'https://www.fulek.com/data/api/user/login';
 
         $.ajax({
             type: 'POST',
-            url: url,
+            url: 'https://www.fulek.com/data/api/user/login',
+
             data: JSON.stringify({
-                username: username,
-                password: password
+                username: $('#usernameLogIn').val(),
+                password: $('#passwordLogIn').val()
             }),
 
             dataType: "json",
             contentType: 'application/json',
             
-            success: function(data, status) {
-                console.log(status);
+            success: function(data) {
                 $.each(data, function(key, value){
                     var errorMsg = "";
 
                     if (key == 'errorMessages') {
                         errorMsg = value[0];
+                        return;
                     }
 
                     if (key == 'isSuccess' && value == true) {
@@ -40,15 +38,13 @@ $(document).ready(function() {
     });
 
     $('#registerButton').on('click', function(){
-        var username = $('#username').val();
-        var password = $('#username').val();
-        var url = 'https://www.fulek.com/data/api/user/register';
+
         $.ajax({
             type: 'POST',
-            url: url,
+            url: 'https://www.fulek.com/data/api/user/register',
             data: JSON.stringify({
-                username: username,
-                password: password
+                username: $('#username').val(),
+                password: $('#password').val()
             }),
 
             dataType: "json",
