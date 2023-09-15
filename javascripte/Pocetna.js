@@ -19,15 +19,24 @@ $(document).ready(function() {
 
                     if (key == 'errorMessages') {
                         errorMsg = value[0];
-                        alert('Krivi user');
                         return;
+                    }
+                    
+                    if (key == 'isSuccess' && value == false) {
+                        $('#lblWrongUser').show();
+                        $('#lblSucceslogin').hide();
                     }
 
                     if (key == 'isSuccess' && value == true) {
+                        $('#lblWrongUser').hide();
+                        $('#lblSucceslogin').show();
                         saveUserToken(data);
-                        $('#loginButton').hide();
-                        $('#logoutButton').show();
-                        window.location.href="pocetna.html";
+                        setTimeout(() => {
+                            $('#loginButton').hide();
+                            $('#logoutButton').show();
+                            window.location.href="pocetna.html";
+                        }, 4000);
+                        
                     }
                 })
             },
