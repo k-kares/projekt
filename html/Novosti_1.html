@@ -149,17 +149,37 @@
           </p>
     </div>
 
-    <div class="text-center">
+    <div class="text-center" >
 
-        <a href="../Resursi/img/galerija1.jpg" >
-            <img src="../Resursi/img/galerija1.jpg" class="ContentSlika">
-        </a>
-
-        <a href="../Resursi/img/galerija2.jpg" class="lightboxLink">
-            <img src="../Resursi/img/galerija2.jpg" class="ContentSlika">
-        </a>
-
+      <img src="../Resursi/img/galerija1.jpg" onclick="openModal();currentSlide(1)" class="ContentSlika">
+  
+      <img src="../Resursi/img/galerija2.jpg" onclick="openModal();currentSlide(2)" class="ContentSlika">
+  </div>
+  
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div id="drugiModal" class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 2</div>
+        <img src="../Resursi/img/galerija1.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 2</div>
+        <img src="../Resursi/img/galerija2.jpg" style="width:100%">
+      </div>
+  
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      </div>
     </div>
+  </div>
 
     <div class="ContentVideo text-center">
         <video src="../Resursi/video/worldskills.mp4" controls></video>
@@ -170,4 +190,5 @@
       <div class="text-danger">
         <h3 class="footerTekst">ZAISKRI</h3>
     </footer>
+    <script src="../javascripte/lightbox.js"></script>
 </body>
