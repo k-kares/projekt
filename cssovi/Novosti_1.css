@@ -96,6 +96,7 @@ h2{
     margin-right: 20%;
     border-bottom: 3px solid orange;
     margin-bottom: 5%;
+    animation: normal 1s naslovUp;
 }
 
 #ContentTekst{
@@ -230,3 +231,13 @@ h2{
     padding: 2px 16px;
     color: white;
   }
+
+  @keyframes naslovUp {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform : translateY(0);
+    }
+}

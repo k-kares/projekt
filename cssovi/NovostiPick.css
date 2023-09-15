@@ -59,6 +59,7 @@ footer{
     justify-content: center;
     display:flex;
     margin-top: 5%;
+    animation: normal 1s naslovUp;
 }
 
 #novostiGrid{
@@ -145,5 +146,15 @@ p{
     }
     to {
         transform: scale(1, 1);
+    }
+}
+
+@keyframes naslovUp {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform : translateY(0);
     }
 }
