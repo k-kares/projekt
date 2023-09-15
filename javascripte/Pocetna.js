@@ -19,6 +19,7 @@ $(document).ready(function() {
 
                     if (key == 'errorMessages') {
                         errorMsg = value[0];
+                        alert('Krivi user');
                         return;
                     }
 
@@ -30,10 +31,6 @@ $(document).ready(function() {
                     }
                 })
             },
-
-            error: function(error) {                
-                console.log('Error:', error);
-            }
         });
     });
 
